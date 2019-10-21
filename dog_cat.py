@@ -51,7 +51,7 @@ def train(dir: str, im_size: tuple, pretrained_checkpoint=None, **kwargs):
         Input imsize for the neural net. Every img in the dataset will be
         rescaled to this size
     pretrained_checkpoint : str or None
-        If not None, it must be a str that indicates path to pretrained checkpoint,
+        If pretrained_checkpoint not None, it must be a str that indicates path to pretrained checkpoint,
         then the neural net will load pretrained weights before training
     **kwargs : dict
         arguments for _fit method of neural net
