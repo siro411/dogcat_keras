@@ -101,7 +101,10 @@ def down_fr_url(urls: list, save_dir: str='', unzip: bool=False):
                 zip = zipfile.ZipFile(save_path)
                 zip.extractall('.')
                 zip.close()
-
+            if os.path.exists(save_path) and
+            os.path.getsize(save_path)>=retri_file_size (url):
+                 print('{} already exists.'.format(save_path))
+                 continue
         except Exception as e:
             error_handle()
             print(e)
